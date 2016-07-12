@@ -5,6 +5,10 @@
     display: inline-block;
     font-size: 60px;
 }
+li{
+    list-style: none;
+    margin-top:10px;
+}
 #Date{
     font-size: 30px;
 }

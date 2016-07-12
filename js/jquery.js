@@ -18,7 +18,7 @@
 	},1000);
 })*/
 
-$(document).ready(function() {
+$(document).ready(function () {
 	var monthNames = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 	var dayNames = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
 	var newDate = new Date();
@@ -40,12 +40,15 @@ $(document).ready(function() {
 		$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
 	    }, 1000);	
 });
+
 //Insertado de function para traer los li
 $(document).ready(function(){
 	$('li').on('click',function(){
-		console.log("hola");
 		var letras = $(this).text();
-		$('.lista').append('<li>'+letras+'</li>');
+		var horas = $('.clock').text();
+		var fechas = $('#Date').text();
+		$('.lista').append('<li>'+letras+'</li>'+ horas + fechas +'<hr>');
 		$(this).off();
+
 	})
 })
