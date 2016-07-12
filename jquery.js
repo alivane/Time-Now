@@ -39,13 +39,9 @@ $(document).ready(function() {
 		var hours = new Date().getHours();
 		$("#hours").html(( hours < 10 ? "0" : "" ) + hours);
 	    }, 1000);	
-});
-//Insertado de function para traer los li
-$(document).ready(function(){
-	$('li').on('click',function(){
-		console.log("hola");
-		var letras = $(this).text();
-		$('.lista').append('<li>'+letras+'</li>');
-		$(this).off();
+	$('p').click(function(){
+		console.log("hol");
 	})
-})
+
+});
+

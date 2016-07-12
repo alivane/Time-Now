@@ -1,0 +1,10 @@
+*{
+    text-align: center;
+}
+.clock li {
+    display: inline-block;
+    font-size: 60px;
+}
+#Date{
+    font-size: 30px;
+}
