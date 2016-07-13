@@ -1,9 +1,13 @@
 
+//Primero defini las variables de los meses , dias y tambien defini nueva fecha
+
 	var monthNames = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
 	var dayNames = ["Domingo","Lunes","Martes","Miercoles","Jueves","Viernes","Sabado"];
 	var newDate = new Date();
 	newDate.setDate(newDate.getDate());
 	$('.clock-date').html(dayNames[newDate.getDay()] + " " + newDate.getDate() + ' ' + monthNames[newDate.getMonth()] + ' ' + newDate.getFullYear());
+
+//Segundo , defini las functiones deacuerdo a los paises
 
 function contadoresMenosUno(){
 	setInterval( function() {
@@ -41,6 +45,9 @@ function contadoresMasUno(){
 		$(".hours2").html(parseInt(( hours < 10 ? "0" : "" ) + hours)+1);
 	}, 1000);
 }
+
+//Llame a la function contadoresCeros para que inicie la hora actual
+
 $(document).ready(function () {
 	contadoresCero();
 })
