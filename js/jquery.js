@@ -68,25 +68,27 @@ $(document).ready(function(){
 			$('.horas').html(horas);
 			
 			$('.horas .hours').removeClass().addClass('hours1');
-			$('.ciudad').append('<p>'+letras+'</p>');
+			
 			contadoresMenosUno();
 			
 		}else if( letras === $('#santiago').text() || letras === $('#caracas').text() ){
 			$('.horas').html(horas);
 			
-			$('.ciudad').append('<p>'+letras+'</p>');
+		
 			contadoresCero();
 		}else{
 			$('.horas').html(horas);
 			
 			$('.horas .hours').removeClass().addClass('hours2')
-			$('.ciudad').append('<p>'+letras+'</p>');
+	
 			contadoresMasUno();
 		}
+		$('.ciudad').append('<p class="parrafo">'+letras +'</p>');
 		$(this).off()
-
+		
+		
 	})
 })
-
+//$('.ciudad').append('<p class="parrafo">'+letras +" "+" "+'<a href="#">'+('<i class="fa fa-times" aria-hidden="true"></i>')+'</a>'+'</p>');
 
 
