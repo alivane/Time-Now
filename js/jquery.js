@@ -53,7 +53,6 @@ $(document).ready(function () {
 })
 
 $(document).ready(function(){
-
 //Luego al hacer click a un li defini distintas condicionales
 
 	$('.pais').on('click',function(){
