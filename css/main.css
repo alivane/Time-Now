@@ -1,10 +1,16 @@
 body{
     text-align: center;
 }
+header{
+    background-color:#44B221;
+    padding: 20px;
+    box-shadow: 0px 3px 8px #091A04 ;
+}
 h1{
     font-family: cursive;
     font-size: 60px;
+    color:#BAFEC6;
 }
 #reloj{
-    font-size: 20px;
+    font-size: 80px;
 }
