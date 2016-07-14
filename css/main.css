@@ -1,3 +1,10 @@
-li{
-    display: inline-block;
+body{
+    text-align: center;
+}
+h1{
+    font-family: cursive;
+    font-size: 60px;
+}
+#reloj{
+    font-size: 20px;
 }

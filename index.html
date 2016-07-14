@@ -7,44 +7,104 @@
 	<link rel="stylesheet" href="css/main.css">
 </head>
 <body>
-
 	<header>
 		<div class="container">
 			<h1>Reloj Mundial</h1>
 		</div>
 	</header>
-	<section>
-		<div class="container" id="contador">
-			<div class="clock">
-				<ul class="listas">
-					<li class="hours"></li>
-					<li class="point">:</li>
-					<li class="minutes"></li>
-					<li class="point">:</li>
-					<li class="seconds"></li>
-				</ul>
-				<div class="clock-date"></div>
-			</div>
-		</div>
+	<section>	
+	    <div class="container">
+	        <div class="row">
+		        <div id="reloj"></div>
+	        </div>
+	        <div class="row">
+	            <div id="fecha"></div>
+	        </div>
+	        <div class="row">
+		        <div class="title">
+		            <h3>PAISES SELECCIONADOS</h3>
+		        </div>
+		        <div id="place"></div>
+	        </div>
+	    </div>
 	</section>	
 	<section>
-		<div class="btn-group">
-			<button type="button" class="btn btn-default dropdown-toggle"
-			     data-toggle="dropdown">
-			    Título del botón <span class="caret"></span>
-			</button>
-			<ul class="dropdown-menu" role="menu">
-			    <li id="chicago"><a href="#">Chicago</a></li>
-			    <li id="spaulo"><a href="#">São Paulo</a></li>
-			    <li id="santiago"><a href="#">Santiago</a></li>
-			    <li id="mexico"><a href="#">Mexico D.F</a></li>
-			    <li id="caracas"><a href="#">Caracas</a></li>
-			    <li id="brasilia"><a href="#">Brasilia</a></li>
-			    <li id="quito"><a href="#">Quito</a></li>
-			    <li id="guayaquil"><a href="#">Guayaquil</a></li>
-			    <li id="smaria"><a href="#">Santa Marta</a></li>
-			    <li id="bogota"><a href="#">Bogota</a></li>
-			</ul>
+		<div class="container">
+			<div class="row">
+	          <div class="col-md-3">
+	            <!-- Trigger the modal with a button-->
+	            <button type="button" data-toggle="modal" data-target="#myModal" class="btn btn-info btn-lg">Selecciona otro país</button>
+	            <!-- Modal-->
+	            <div id="myModal" role="dialog" class="modal fade">
+	              <div class="modal-dialog">
+	                <!-- Modal content-->
+	                <div class="modal-content">
+	                  <div class="modal-header">
+	                    <button type="button" data-dismiss="modal" class="close">×</button>
+	                    <h4 class="modal-title">Modal Header</h4>
+	                  </div>
+	                  <div class="modal-body">
+	                    <div class="checkbox">
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="0" id="chicago"class="pais">Chicago
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="1" id="chicago"class="pais">Sau Paulo
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="2" id="santiago"class="pais">Santiago
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="3"id="mexico" class="pais">Mexico D.F.
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="4"id="caracas" class="pais">Caracas
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="5"id="brasilia" class="pais">Brasilia
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="6"id="quito" class="pais">Quito
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="7"id="guayaquil" class="pais">Guayaquil
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="8" id="smaria"class="pais">Santa Mata
+	                        </label>
+	                      </div>
+	                      <div class="checkbox">
+	                        <label>
+	                          <input type="checkbox" value="9"id="bogota" class="pais">Bogota
+	                        </label>
+	                      </div>
+	                    </div>
+	                  </div>
+	                  <div class="modal-footer">
+	                    <button type="button" data-dismiss="modal" class="btn btn-default">Close</button>
+	                  </div>
+	                </div>
+	              </div>
+	            </div>
+	          </div>
+	        </div>
 		</div>	
 	</section>
 	<secton>
