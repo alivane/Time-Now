@@ -1,4 +1,4 @@
-/*
+
 //Primero defini las variables de los meses , dias y tambien defini nueva fecha
 
 	var monthNames = ["Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Septiembre","Octubre","Noviembre","Diciembre"];
@@ -57,147 +57,37 @@ $(document).ready(function(){
 //Luego al hacer click a un li defini distintas condicionales
 
 	$('.pais').on('click',function(){
+		$(this).addClass('tachar');
 		//llame al texto del li seleccionado
 		var letras = $(this).text();
 		//clone las etiquetas de .clock para obtener el tiempo
-		
+		var horas = $('.clock').clone();
 		if(letras === $('#chicago').text() || letras === $('#mexico').text() || letras === $('#quito').text()
 			|| letras === $('#guayaquil').text() || letras === $('#smaria').text() || letras === $('#bogota').text()
 			){
 			
-			$('.horas').append('<div class="nuevo"></div>');
-			var horas = $('.clock').clone();
-			$('.nuevo').html(horas);
+			$('.horas').html(horas);
 			
-			$('.nuevo .hours').removeClass().addClass('hours1');
-			$('.ciudad').append('<p>'+letras+'</p>'+'<br>');
+			$('.horas .hours').removeClass().addClass('hours1');
+			$('.ciudad').append('<p>'+letras+'</p>');
 			contadoresMenosUno();
-			if( $('.clock')>2){
-				$('.clock').remove();
-			}
-
 			
-
 		}else if( letras === $('#santiago').text() || letras === $('#caracas').text() ){
-
-			$('.horas').append('<div class="nuevo1"></div>');
-			var horas = $('.clock').clone();
-			$('.nuevo1').html(horas);
+			$('.horas').html(horas);
 			
-			$('.ciudad').append('<p>'+letras+'</p>'+'<br>');
+			$('.ciudad').append('<p>'+letras+'</p>');
 			contadoresCero();
-			if( $('.clock')>2){
-				$('.clock').remove();
-			}
 		}else{
-			$('.horas').append('<div class="nuevo2"></div>');
-			var horas = $('.clock').clone();
-			$('.nuevo2').html(horas);
+			$('.horas').html(horas);
 			
-			$('.nuevo2 .hours').removeClass().addClass('hours2')
-			$('.ciudad').append('<p>'+letras+'</p>'+'<br>');
+			$('.horas .hours').removeClass().addClass('hours2')
+			$('.ciudad').append('<p>'+letras+'</p>');
 			contadoresMasUno();
-			if( $('.clock')>2){
-				$('.clock').remove();
-			}
 		}
 		$(this).off()
 
 	})
 })
 
-
-*/
-function horarioNormal() {
-	var horaActual = new Date();
-	var minuto = horaActual.getMinutes();
-	var segundo = horaActual.getSeconds();
-	var hora = horaActual.getHours();
-	if(minuto<10){
-		minuto = "0" + minuto
-	}
-	if(segundo<10){
-		segundo = "0" + segundo
-	}
-	$("#reloj").html(hora + " : " + minuto + " : " + segundo)
-	var horaCambio = setTimeout("horarioNormal()", 1000)
-}
-horarioNormal();
-
-function diaActual() {
-	var fecha = new Date();
-	var diaSemana = new Array("Domingo","Lunes","Martes","Miércoles","Jueves","Viernes","Sábado")
-	var mesAño = new Array("Enero","Febrero","Marzo","Abril","Mayo","Junio","Julio","Agosto","Setiembre","Octubre","Noviembre","Diciembre")
-	var dia = diaSemana[fecha.getDay()];
-	var mes = mesAño[fecha.getMonth()];
-	var año = fecha.getFullYear();
-	$("#fecha").html(dia + " " + fecha.getDate() + " de " + mes + " del " + año )
-}
-diaActual();
-
-var lugares=[
-    {
-        ciudad: "Chicago",
-        hora: 0
-    },
-    {
-        ciudad: "Sau Paulo",
-        hora: 2
-    },
-    {
-        ciudad: "Santiago",
-        hora: 1
-    },
-    {
-        ciudad: "México D.F.",
-        hora: -1
-    },
-    {
-        ciudad: "Caracas",
-        hora: 1
-    },
-    {
-        ciudad: "Brasilia",
-        hora: 2
-    },
-    {
-        ciudad: "Quito",
-        hora: 0
-    },
-    {
-        ciudad: "Guayaquil",
-        hora: 0
-    },
-    {
-        ciudad: "Santa Marta",
-        hora: 1
-    },
-    {
-        ciudad: "Bogota",
-        hora: 1
-    }
-]
-
-function horasLugares() {
-	var horaLugar = new Date();
-	var minuto = horaLugar.getMinutes();
-	var segundo = horaLugar.getSeconds();
-	var hora = horaLugar.getHours();
-	var id = $(this).val();
-	if(minuto<10){
-		minuto = "0" + minuto
-	}
-	if(segundo<10){
-		segundo = "0" + segundo
-	}
-	if($(this).is(":checked")){
-		$("#place").append("<span id='" + id + "'>" + parseInt(hora+lugares[id].hora) + " : " + minuto + " : " + segundo + " " + lugares[id].ciudad + " " + "</span></br>" )
-	} else {
-		$("#" + id).remove();
-	}
-}
-$(document).ready(function() {
-	$(".pais").click(horasLugares);
-});
 
 

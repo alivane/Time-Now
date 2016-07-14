@@ -1,16 +1,68 @@
 body{
-    text-align: center;
+    text-align: center; 
+    background-color:#D0FFCE;
 }
 header{
-    background-color:#44B221;
+    background-color:#C8920F;
     padding: 20px;
     box-shadow: 0px 3px 8px #091A04 ;
 }
 h1{
     font-family: cursive;
     font-size: 60px;
-    color:#BAFEC6;
+    color:#D0FFCE;
+    
 }
-#reloj{
-    font-size: 80px;
+#contador li{
+    font-size: 60px;
+    margin-top:20px;
+    color:#292C29;
+    display: inline-block;
+    font-family: 'Orbitron', sans-serif;
+}
+li{
+    display: inline-block;
+}
+.clock-date{
+    font-size: 30px;
+    font-family: checkbox;
+    color:#44B221;
+}
+.btn{
+    background-color:#44B221;
+    color:white;
+    margin-top:10px;
+    box-shadow: 0px 4px 4px #003730;
+    padding: 10px;
+    text-align: center;
+    width: 200px;
+
+}
+.horas , .ciudad{
+    font-size: 30px;
+    color:#0F584C;
+    font-family: currier;
+    margin-top:20px;
+   
+    box-shadow: 0px 3px 7px #000;
+}
+.horas .clock{
+    margin-bottom: 40px;
+     background-color:#EFA028;
+}
+.ciudad p{
+    margin-bottom: 40px;
+     background-color:#23E1C4;
+}
+.dropdown-menu{
+    width: 200px;
+    top:-300px;
+}
+.dropdown-menu li{
+    display: block;
+    margin:10px;
+}
+.tachar{
+    background-color:red;
+    color:white;
 }
